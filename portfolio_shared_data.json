@@ -1,0 +1,39 @@
+{
+    "basic_info": {
+      "name": "Daisy Mathew",
+      "titles": ["Academic Facilitator at Freadom (Stones2Milestones)","Educator", "TEFL/TESOL Certified", "Literature Student "],
+      "social": [
+        {
+          "name": "youtube",
+          "url": "https://www.youtube.com/channel/UC9i19xURUggRT4kwzcTOtbw",
+          "class": "fab fa-youtube"
+        },
+        {
+          "name": "instagram",
+          "url": "https://www.instagram.com/_daisymathew_/?utm_medium=copy_link",
+          "class": "fab fa-instagram"
+        }
+      ],
+      "images": "pic.png"
+    },
+    "skills": {
+      "icons": [
+        {
+          "name": "Google Suite",
+          "class": "devicon-google-plain",
+          "level": "95"
+        },
+        {
+          "name": "Video Creation",
+          "class": "devicon-css3-plain",
+          "level": "95"
+        },
+        {
+          "name": "Microsoft",
+          "class": "devicon-windows8-original",
+          "level": "80"
+        }
+        
+      ]
+    }
+  }
