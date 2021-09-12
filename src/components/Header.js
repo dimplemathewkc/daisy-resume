@@ -30,18 +30,21 @@ class Header extends Component {
       this.titles = this.props.sharedData.titles.map(x => [ x.toUpperCase(), 1500 ] ).flat();
     }
 
+    var pic = "https://im.ge/i/whatsapp-image-2021-09-12-182250.TqfGn4"
     const HeaderTitleTypeAnimation = React.memo( () => {
       return <Typical className="title-styles" steps={this.titles} loop={50} />
     }, (props, prevProp) => true);
-
     return (
       <header id="home" style={{ height: window.innerHeight - 140, display: 'block' }}>
         <div className="row aligner" style={{height: '100%'}}>
           <div className="col-md-12">
             <div>
-              <span className="iconify header-icon" data-icon="la:laptop-code" data-inline="false"></span>
-              <br/>
-              <h1 className="mb-0">
+                <img src="https://i.im.ge/2021/09/12/TqkTkp.png" 
+                alt="TqkTkp.png" border="0"
+                height="150px" width="150px"/>
+
+              
+              <h1 className="mb-0 mt-0">
                 <Typical steps={[name]} wrapper="p" />
               </h1>
               <div className="title-container">

@@ -1,20 +1,19 @@
 import React, { Component } from "react";
 import { Icon } from "@iconify/react";
-import angularIcon from "@iconify/icons-logos/angular-icon";
-import reactIcon from "@iconify/icons-logos/react";
-import vueIcon from "@iconify/icons-logos/vue";
+import chalkboardTeacher from '@iconify/icons-la/chalkboard-teacher';
+import typewriterIcon from '@iconify/icons-si-glyph/typewriter';
+import bxBookReader from '@iconify/icons-bx/bx-book-reader';
 
 class About extends Component {
   render() {
     if (this.props.sharedBasicInfo) {
-      var profilepic = "images/" + this.props.sharedBasicInfo.image;
+      var profilepic = "https://media-exp1.licdn.com/dms/image/C5603AQEOa9L06lm3rg/profile-displayphoto-shrink_800_800/0/1631078247397?e=1637193600&v=beta&t=7Q9x7n9pIZaLg9roVfZTXXuBSVXXxTIJM25zZ8aNDyw"
     }
     if (this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.about;
       var hello = this.props.resumeBasicInfo.description_header;
       var about = this.props.resumeBasicInfo.description;
     }
-
     return (
       <section id="about">
         <div className="col-md-12">
@@ -22,7 +21,7 @@ class About extends Component {
             <span>{sectionName}</span>
           </h1>
           <div className="row center mx-auto mb-5">
-            <div className="col-md-4 mb-5 center">
+            <div className="col-md-3 mb-5 center">
               <div className="polaroid">
                 <span style={{ cursor: "auto" }}>
                   <img
@@ -31,15 +30,16 @@ class About extends Component {
                     alt="Avatar placeholder"
                   />
                   <Icon
-                    icon={angularIcon}
+                    icon={chalkboardTeacher}
+                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
+                    border="1"
+                  />
+                  <Icon
+                    icon={typewriterIcon}
                     style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
                   />
                   <Icon
-                    icon={reactIcon}
-                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
-                  />
-                  <Icon
-                    icon={vueIcon}
+                    icon={bxBookReader}
                     style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
                   />
                 </span>
@@ -76,11 +76,11 @@ class About extends Component {
                       lineHeight: "200%",
                     }}
                   >
+                    
+                    <span className="wave">{hello} </span>
                     <br />
-                    <span className="wave">{hello} :) </span>
                     <br />
-                    <br />
-                    {about}
+                    <p className="wave_p">{about}</p>
                   </div>
                 </div>
               </div>

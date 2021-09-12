@@ -20,27 +20,25 @@ class App extends Component {
   }
 
   applyPickedLanguage(pickedLanguage, oppositeLangIconId) {
-    this.swapCurrentlyActiveLanguage(oppositeLangIconId);
+    // this.swapCurrentlyActiveLanguage(oppositeLangIconId);
     document.documentElement.lang = pickedLanguage;
-    var resumePath =
-      document.documentElement.lang === window.$primaryLanguage
-        ? `res_primaryLanguage.json`
-        : `res_secondaryLanguage.json`;
+    var resumePath = `res_primaryLanguage.json`
+    
     this.loadResumeFromPath(resumePath);
   }
 
-  swapCurrentlyActiveLanguage(oppositeLangIconId) {
-    var pickedLangIconId =
-      oppositeLangIconId === window.$primaryLanguageIconId
-        ? window.$secondaryLanguageIconId
-        : window.$primaryLanguageIconId;
-    document
-      .getElementById(oppositeLangIconId)
-      .removeAttribute("filter", "brightness(40%)");
-    document
-      .getElementById(pickedLangIconId)
-      .setAttribute("filter", "brightness(40%)");
-  }
+  // swapCurrentlyActiveLanguage(oppositeLangIconId) {
+  //   var pickedLangIconId =
+  //     oppositeLangIconId === window.$primaryLanguageIconId
+  //       ? window.$secondaryLanguageIconId
+  //       : window.$primaryLanguageIconId;
+  //   document
+  //     .getElementById(oppositeLangIconId)
+  //     .removeAttribute("filter", "brightness(40%)");
+  //   document
+  //     .getElementById(pickedLangIconId)
+  //     .setAttribute("filter", "brightness(40%)");
+  // }
 
   componentDidMount() {
     this.loadSharedData();
@@ -84,7 +82,7 @@ class App extends Component {
       <div>
         <Header sharedData={this.state.sharedData.basic_info} />
         <div className="col-md-12 mx-auto text-center language">
-          <div
+          {/* <div
             onClick={() =>
               this.applyPickedLanguage(
                 window.$primaryLanguage,
@@ -92,15 +90,15 @@ class App extends Component {
               )
             }
             style={{ display: "inline" }}
-          >
-            <span
+          > */}
+            {/* <span
               className="iconify language-icon mr-5"
               data-icon="twemoji-flag-for-flag-united-kingdom"
               data-inline="false"
               id={window.$primaryLanguageIconId}
             ></span>
-          </div>
-          <div
+          </div> */}
+          {/* <div
             onClick={() =>
               this.applyPickedLanguage(
                 window.$secondaryLanguage,
@@ -115,7 +113,7 @@ class App extends Component {
               data-inline="false"
               id={window.$secondaryLanguageIconId}
             ></span>
-          </div>
+          </div> */}
         </div>
         <About
           resumeBasicInfo={this.state.resumeData.basic_info}
